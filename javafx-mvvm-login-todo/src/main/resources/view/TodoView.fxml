@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
+    <Label text="Mes tâches" style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+    <Label fx:id="lbBienvenue" style="-fx-font-style: italic;"/>
+    <HBox spacing="8">
+        <TextField fx:id="txtNew" promptText="Nouvelle tâche"/>
+        <Button fx:id="btnAdd" text="Ajouter"/>
+        <Button fx:id="btnDel" text="Supprimer"/>
+        <CheckBox fx:id="chkShowDone" text="Afficher terminées"/>
+    </HBox>
+    <TableView fx:id="table" prefHeight="320" editable="true">
+        <columns>
+            <TableColumn fx:id="colTitle" text="Titre" prefWidth="360"/>
+            <TableColumn fx:id="colLength" text="Longueur" prefWidth="100"/>
+            <TableColumn fx:id="colDone"  text="Fait"  prefWidth="120" editable="true"/>
+            <TableColumn fx:id="colDeadline" text="Date limite" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id="lblPreview" style="-fx-font-style: italic;"/>
+    <Button fx:id="btnClearAll" text="Tout supprimer"/>
+    <Button fx:id="btnLogout" text="Déconnexion" />
+</VBox>
